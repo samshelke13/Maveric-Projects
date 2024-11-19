@@ -1,0 +1,115 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <ul class="navbar-nav custom-navbar-nav">
+        <li class="nav-item">
+          <button class="btn btn-light" style="margin-right: 10px;">Find a Mentor</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-light" style="margin-right: 50px;">Book a Session</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-light custom-button"  (click)="logoutUser()">
+            <mat-icon style="margin-right: 5px;">logout</mat-icon>
+            Sign out</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+     <!-- Content -->
+      <div class="header">
+        <nav style="--bs-breadcrumb-divider: '>';"aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="/mentor/search">
+                <mat-icon  style="color: white;">home</mat-icon></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="/mentor/browse" style="color: white;">
+              Find a Mentor</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">     
+              {{ mentor.firstName }} {{ mentor.lastName }}
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="mentor-image-container">
+        <div class="mentor-image">
+          <img mat-card-md-image [src]="mentor.profileImage ? getFormattedImage(mentor.profileImage, mentor.imageFormat) : 'assets/dummyUser.png'">
+        </div>
+      </div>
+      
+      <mat-card class="Mentor-card">
+        <div class="mentor-details">
+          <!-- First column for mentor details -->
+          <div class="mentor-details-column" style=" margin-left: 140px;">
+            <mat-card-header>
+              <mat-card-title style="font-size: 25px">{{ mentor.firstName }} {{ mentor.lastName }}</mat-card-title>
+              <mat-card-subtitle>{{ mentor.jobTitle }}</mat-card-subtitle>
+            </mat-card-header>
+            <br>
+            <mat-card-content>
+              <div class="matcard-custom-content">
+                <p class="icon-and-content">
+                  <mat-icon>business</mat-icon>
+                  {{ mentor.company }}
+                </p>
+                <p class="icon-and-content">
+                  <mat-icon>email</mat-icon>
+                  {{ mentor.email }}
+                </p>
+                <p class="icon-and-content">
+                  <mat-icon>location_on</mat-icon>
+                  {{ mentor.location }}
+                </p>
+              </div>
+            </mat-card-content>
+          </div>
+      
+          <!-- Second column for skills and categories -->
+          <div class="mentor-details-column">
+            <div class="spacer" style="height: 70px;"></div>
+            <div class="skills-and-categories">
+              <div class="skills">
+                <span style="font-size: 15.5px; font-weight: 600; opacity: 0.9;">Skills</span>
+                <br>
+                  <span class="badge rounded-pill" *ngFor="let skill of mentor.skills"
+                  style="background-color:#1c3d7a; color: white; size: 15px; margin-right: 5px;">{{ skill }}</span>
+                </div>
+              </div>
+              <div class="spacer" style="height: 20px;"></div>
+              <div class="categories">
+                <span style="font-size: 15.5px; font-weight: 600; opacity: 0.9;">Categories</span>
+                <p><span class="badge rounded-pill" style="background-color:#1c3d7a; color: white; size: 15px;">{{ mentor.category.category }}</span></p>
+              </div>
+            </div>
+          </div>
+        
+        <!-- Horizontal line -->
+        <div class="line"></div>
+        
+        <!-- Bio section -->
+        <mat-card-content>
+          <p style="font-size: 14px; margin-left: 150px;">{{ mentor.bio }}</p>
+        </mat-card-content>
+        <br>
+        <!-- Buttons in the right side of the card -->
+        <mat-card-actions class="buttons-right">
+          <button mat-button class="view-profile-button" style="margin-right: 15px;"> Book a Session</button>
+          <button mat-button class="view-profile-button" (click)="goBack()" style="margin-right: 25px;">
+            <mat-icon>arrow_back</mat-icon>
+            Back
+          </button>
+        </mat-card-actions>
+        <div class="spacer" style="height: 50px;"></div>
+      </mat-card>
+  
+     <!-- Footer -->
+  <footer class="navbar fixed-bottom custom-footer">
+    <div class="container d-flex justify-content-center align-items-center">
+      <p class="text-black mb-0"> &copy; 2023 All Rights Reserved</p>
+    </div>
+  </footer>
+<router-outlet></router-outlet>

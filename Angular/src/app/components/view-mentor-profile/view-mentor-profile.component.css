@@ -1,0 +1,132 @@
+ 
+  @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+  .custom-navbar {
+    background-color: #cfe2ff;
+  }
+  
+  .custom-navbar-nav{
+    margin-left: auto;
+  }
+  
+  .btn.btn-light:hover {
+    background-color: rgb(155, 187, 238) ;
+  }
+  
+  .custom-footer{
+    background-color: #cfe2ff;
+  }
+
+  .custom-button{
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-button .mat-icon{
+    size: 10px;
+    color: rgb(6, 6, 32);
+  }  
+
+  .breadcrumb{ 
+    position: relative;
+    top: 15px;
+    display: flex;
+    margin-left: 100px;
+  }
+  
+  .breadcrumb-item{
+    color: #fff;
+  }
+
+.breadcrumb-item::before {
+  color: white; /* Set the color of the ">" sign to white */
+}
+  .header {
+    background-color: #1c3d7a;
+    height: 200px;
+  }
+  
+  .mentor-image-container {
+    position: relative;
+    top: -130px;
+    display: flex;
+    margin-left: 100px;
+  }
+  
+  .mentor-image {
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%;
+    overflow: hidden; 
+    border: 3px solid #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .mentor-image img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .Mentor-card{
+    margin-top: -120px;
+    border: #fff;
+  }
+
+  .icon-and-content{
+    display: flex;
+    align-items: center;
+    color: teal;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .icon-and-content .mat-icon{
+    font-size: 20px;
+    color: teal;
+  }
+
+  .view-profile-button {
+    background-color: #1c3d7a;
+    color: white !important;
+    font-size: 14px;
+    width: 160px;
+    border-radius: 10px !important;
+
+  }
+  
+  /* Style for mentor details columns */
+.mentor-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mentor-details-column {
+  flex: 1;
+  margin-right: 20px; /* Adjust the spacing between columns as needed */
+}
+
+/* Style for the horizontal line */
+.line {
+  height: 1px;
+  background-color: rgb(219, 221, 223);
+  margin: 0.5rem 0;
+}
+
+/* Style for buttons on the right side */
+.buttons-right {
+  justify-content: flex-end;
+}
+
+mat-card-title{
+  font-weight: bold;
+}
+mat-card-subtitle{
+  color: rgb(20, 20, 20);
+  margin-bottom: 10px;
+}
+
+.mat-card{
+  font-family: Inter,sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}

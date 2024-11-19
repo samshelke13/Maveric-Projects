@@ -1,0 +1,7 @@
+com\talentshare\mentor\service\MentorServiceTest.class
+com\talentshare\mentor\controller\CategoryControllerTest.class
+com\talentshare\mentor\service\CategoryServiceTest.class
+com\talentshare\mentor\TlsMentorRegDemoV1ApplicationTests.class
+com\talentshare\mentor\controller\MentorControllerTest.class
+com\talentshare\mentor\service\SkillServiceTest.class
+com\talentshare\mentor\controller\SkillControllerTest.class
